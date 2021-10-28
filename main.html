@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulario Cliente</title>
+        <link rel="stylesheet" href="estilos.css">
+        <script>
+            function SoloLetras(e){
+                key = e.keyCode || e.which;
+                tecla = String.fromCharCode(key).toString();
+                letras = "ABCDEFGHIJKLMÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz";
+                especiales = [8,13];
+                tecla_especial = false
+                for(var i in especiales){
+                    if(key==especiales[i]){
+                        tecla_especial = true;
+                        break;
+                    }
+                }
+                if(letras.indexOf(teclas)==-1 && !tecla_especial){
+                    alert("Error, ingresar solo letras");
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form action="" class="formulario">
+            <h1 class="formulario__titulo">Registro</h1>
+            <select name="tipodepersona" class="formulario__input">
+                <option value="value1">Natural</option>
+                <option value="value2" selected>Juridica</option>
+              </select>
+              <input type="text"  onkeypress="return SoloLetras(event);" required class="formulario__input">
+              <label for="" class="formulario__label">Numero de Documento</label>
+              <input type="text" class="formulario__input">
+              <label for="" class="formulario__label">Nombre</label>
+              <input type="text" class="formulario__input">
+              <label for="" class="formulario__label">Telefono</label>
+              <input type="text" class="formulario__input">
+              <label for="" class="formulario__label">Telefono Movil</label>
+              <input type="text" class="formulario__input">
+              <label for="" class="formulario__label">Email</label>
+              <input type="text" class="formulario__input">
+              <label for="" class="formulario__label">Ciudad</label>
+              <input type="text" class="formulario__input">
+              <label for="" class="formulario__label">Direccion</label>
+              <input type="text" class="formulario__input">
+              <label for="" class="formulario__label">Sitio Web</label>
+              <input type="text" class="formulario__input">
+              <label for="" class="formulario__label">Nombre de contacto</label>
+              <input type="submit" class="formulario__submit">
+        </form>
+        <script src="form.js"></script>
+    </body>
+</html>

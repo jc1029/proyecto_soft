@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Guardar Historial</title>
+    <LINK REL="stylesheet" type="text/css" HREF="req.css">
+    <script language="Javascript">
+    <!--
+      function guardar() {
+        alert('Guardado con exito ');
+      }
+      function salir() {
+        alert('Soporte no guardado ');
+      }
+    //-->
+    </script>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>
+          <p>Empresarios S.A.S</p><br><br>
+          <p>Nit 800.000.001</p><br><br>
+          <p>Soporte Informes de Activos Fijos</p><br><br>
+          <p>Asesor: Carolina Rojas</p><br><br>
+          <textarea maxlength="500" disabled=true>Henry necesita soporte para crear una nueva ciudad en el sistema
+          </textarea>
+        </td>
+        <td>
+          <form action="procesa.phtml" name="form" id="form" method="GET">
+            <textarea name="detalle" maxlength="500" value="Solucion">Se indica como crear la ciudad en el programa</textarea>
+            <br><br>
+            <button type="button" name="b1" onClick="guardar()">Guardar</button>
+            <button type="button" name="b2" onClick="salir()">Salir</button>
+	</form>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
